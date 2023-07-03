@@ -5,3 +5,21 @@
 
 td:hover {background-color: gray;}
 
+h1{
+    text-align: center;
+    padding: 2%;
+}
+
+h2{
+    text-align: center;
+    padding: 2%;
+}
+
+table{
+    text-align: center;
+    display: inline-table;
+    max-width: 90%;
+    margin: 2%;
+}
+
+
