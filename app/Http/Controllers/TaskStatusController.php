@@ -16,6 +16,6 @@ class TaskStatusController extends Controller
         $task->completed = $request->input('completed');
         $task->save();
 
-        return redirect()->route('tasks.show', $task->id);
+        return redirect()->route('tasks.index', $task->id);
     }
 }
