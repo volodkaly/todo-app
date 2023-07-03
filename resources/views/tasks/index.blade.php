@@ -2,17 +2,22 @@
 <html>
 <head>
     <title>TO-DO App - Task List</title>
-    <h1>Vítejte v aplikaci TODO-app. Zde můžete tvořit, upravovat a mazat úkoly.</h1>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{asset('css/app.css')}}">
 </head>
 <body>
+<h1>Vítejte v aplikaci TODO-app. Zde můžete tvořit, upravovat a mazat úkoly.</h1>
 <h1>Seznam úkolů</h1>
 
-<table>
+<table class="table table-striped table-hover">
     <thead>
     <tr>
         <th>
             <a href="{{ route('tasks.index', ['sort' => 'title']) }}">
+                <button type="button" class="btn btn-secondary">
                 Seřadit dle názvů
+                </button>
             </a>
         </th>
         <th>
@@ -20,22 +25,29 @@
         </th>
         <th>
             <a href="{{ route('tasks.index', ['sort' => 'deadline']) }}">
+                <button type="button" class="btn btn-secondary">
                 Seřadit dle termínů
+                </button>
             </a>
         </th>
+        <th>
 
+        </th>
         <th>
             <a href="{{ route('tasks.index', ['sort' => 'completed']) }}">
+                <button type="button" class="btn btn-secondary">
                 Seřadit dle stavu
+                    </button>
             </a>
         </th>
     </tr>
-    </thead>
-    <tr>
+
+    <tr class="subhead">
         <th>Název</th>
         <th>Popis</th>
         <th>Termín</th>
         <th>Možnosti</th>
+        <th>Stav</th>
     </tr>
     </thead>
     <tbody>

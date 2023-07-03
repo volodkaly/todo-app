@@ -7,7 +7,6 @@
 <h1>Vytvořit nový úkol</h1>
 
 
-
 <form method="post" action="{{ route('tasks.store') }}">
     @csrf
     <label for="title">Název:</label>
