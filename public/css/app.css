@@ -1,4 +1,6 @@
-
+body{
+    margin: 2%;
+}
 .subhead{
    background-color: gray;
 }
@@ -19,7 +21,82 @@ table{
     text-align: center;
     display: inline-table;
     max-width: 90%;
-    margin: 2%;
 }
 
+
+input[type=range] {
+    -webkit-appearance: none;
+    width: 40px;
+}
+input[type=range]:focus {
+    outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+
+    width: 40px;
+    height: 20px;
+    cursor: pointer;
+    border: 2px solid #000000;
+    background: linear-gradient(to right,rgb(0, 197, 0) 50%, red 50%)
+}
+input[type=range]::-webkit-slider-thumb {
+    height: 18px;
+    width: 19px;
+    cursor: pointer;
+    -webkit-appearance: none;
+    background: #ffffff;
+    border: 2px black solid;
+}
+
+input[type=range]::-moz-range-track {
+    width: 20px;
+    height: 10px;
+    cursor: pointer;
+
+}
+input[type=range]::-moz-range-thumb {
+    height: 30px;
+    width: 15px;
+    background: #FFFFFF;
+    cursor: pointer;
+}
+input[type=range]::-ms-track {
+    width: 20px;
+    height: 10px;
+    cursor: pointer;
+}
+input[type=range]::-ms-fill-lower {
+    background: #df2323;
+}
+input[type=range]::-ms-fill-upper {
+    background: #3aa930;
+}
+input[type=range]::-ms-thumb {
+    height: 30px;
+    width: 15px;
+    background: #FFFFFF;
+    cursor: pointer;
+}
+
+input[type="date"]{
+    margin: 2%;
+    text-align: center;
+    background-color: #a3a3a3;
+    color: #ffffff;
+    border: none;
+    outline: none;
+}
+::-webkit-calendar-picker-indicator{
+    background-color: #ffffff;
+    padding: 5px;
+    cursor: pointer;
+}
+
+button{
+    cursor:pointer;
+}
+
+input{
+    cursor:pointer;
+}
 
