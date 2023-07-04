@@ -22,10 +22,10 @@
     @method('PUT')
 
     <label for="title">Název:</label>
-    <input type="text" id="title" name="title" value="{{ $task->title }}" required><br><br>
+    <input type="text" id="title" name="title" value="{{ htmlspecialchars($task->title) }}" required><br><br>
 
     <label for="content">Popis:</label>
-    <textarea id="content" name="content">{{ $task->content }}</textarea><br><br>
+    <textarea id="content" name="content">{{ htmlspecialchars($task->content) }}</textarea><br><br>
 
     <label for="deadline">Termín:</label>
     <input type="date" id="deadline" name="deadline" value="{{ $task->deadline }}" required><br><br>

@@ -48,9 +48,9 @@
     <tbody>
     @foreach ($tasks as $task)
         <tr>
-            <td>{{ $task->title }}</td>
-            <td>{{ $task->content }}</td>
-            <td>{{ date('d.m.Y', strtotime($task->deadline)) }}</td>
+            <td>{{ htmlspecialchars($task->title) }}</td>
+            <td>{{ htmlspecialchars($task->content) }}</td>
+            <td>{{ htmlspecialchars(date('d.m.Y', strtotime($task->deadline))) }}</td>
             <td style="white-space: nowrap;">
                 <a href="{{ route('tasks.edit', $task) }}" class="btn btn-secondary m-2" style="display: inline-block;">
                     Upravit

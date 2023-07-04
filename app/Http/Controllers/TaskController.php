@@ -22,7 +22,7 @@ class TaskController extends Controller
         return view('tasks.create');
     }
 
-    public function store(Request $request)
+    public function store(Request $request, Task $task)
     {
         $validator = Validator::make($request->all(), [
             'title' => 'required',
@@ -42,7 +42,10 @@ class TaskController extends Controller
             return back()->withErrors($validator)->withInput();
         }
 
-        Task::create($request->all());
+        $task->title = trim($request->input('title'));
+        $task->content = trim($request->input('content'));
+        $task->deadline = $request->input('deadline');
+        $task->save();
         return redirect()->route('tasks.index');
     }
 
@@ -57,8 +60,8 @@ class TaskController extends Controller
             'title' => 'required',
             'deadline' => 'required|date',
         ]);
-        $task->title = $request->input('title');
-        $task->content = $request->input('content');
+        $task->title = trim($request->input('title'));
+        $task->content = trim($request->input('content'));
         $task->deadline = $request->input('deadline');
         $task->save();
 
