@@ -5,7 +5,7 @@ body{
    background-color: gray;
 }
 
-td:hover {background-color: gray;}
+td:hover {background-color: silver;}
 
 h1{
     text-align: center;
@@ -18,8 +18,9 @@ h2{
 }
 
 table{
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
-    display: inline-table;
     max-width: 90%;
 }
 
@@ -100,3 +101,15 @@ input{
     cursor:pointer;
 }
 
+.edit{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+
+#cb{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}

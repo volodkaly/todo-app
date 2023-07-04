@@ -13,7 +13,7 @@
     <tr>
         <th>
             <a href="{{ route('tasks.index', ['sort' => 'title']) }}">
-                <button type="button" class="btn btn-secondary">
+                <button type="button" class="btn btn-secondary" style="white-space: nowrap";>
                     Seřadit dle názvů
                 </button>
             </a>
@@ -22,7 +22,7 @@
         </th>
         <th>
             <a href="{{ route('tasks.index', ['sort' => 'deadline']) }}">
-                <button type="button" class="btn btn-secondary">
+                <button type="button" class="btn btn-secondary" style="white-space: nowrap";>
                     Seřadit dle termínů
                 </button>
             </a>
@@ -31,7 +31,7 @@
         </th>
         <th>
             <a href="{{ route('tasks.index', ['sort' => 'completed']) }}">
-                <button type="button" class="btn btn-secondary">
+                <button type="button" class="btn btn-secondary" style="white-space: nowrap";>
                     Seřadit dle stavu
                 </button>
             </a>
@@ -51,29 +51,24 @@
             <td>{{ $task->title }}</td>
             <td>{{ $task->content }}</td>
             <td>{{ date('d.m.Y', strtotime($task->deadline)) }}</td>
-            <td class="options">
-
-                <a href="{{ route('tasks.edit', $task) }}">
-                    <button type="submit" class="btn btn-secondary m-2">
-                        Upravit
-                    </button>
+            <td style="white-space: nowrap;">
+                <a href="{{ route('tasks.edit', $task) }}" class="btn btn-secondary m-2" style="display: inline-block;">
+                    Upravit
                 </a>
-
-                <form method="post" action="{{ route('tasks.destroy', $task) }}">
+                <form method="post" action="{{ route('tasks.destroy', $task) }}" style="display: inline-block;">
                     @csrf
                     @method('DELETE')
-                    <button type="submit" class="btn btn-secondary m-2">
+                    <button type="submit" class="btn btn-secondary m-2" style="display: inline-block;">
                         Smazat
                     </button>
                 </form>
-
             </td>
-            <td>
+            <td style="white-space: nowrap;">
                 <form method="POST" action="{{ route('tasks.status.update', $task->id) }}">
                     @method('PUT')
                     @csrf
                     <label>Nesplněno</label>
-                    <input type="range" min="0" max="1" name="completed" value="{{$task->completed}}" >
+                    <input type="range" min="0" max="1" name="completed" value="{{$task->completed}}">
                     <label>Splněno</label>
                     <button type="submit" class="btn btn-secondary">Uložit</button>
                 </form>
@@ -83,10 +78,8 @@
     </tbody>
 </table>
 <br>
-<a href="{{ route('tasks.create') }}">
-    <button type="submit" class="btn btn-secondary m-2">
-    Nový úkol
-    </button>
+<a id="cb" href="{{ route('tasks.create') }}" class="btn btn-secondary m-2">
+        Nový úkol
 </a>
 @if (session('error'))
     <div class="alert alert-danger">
