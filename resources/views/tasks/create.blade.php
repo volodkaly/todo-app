@@ -13,10 +13,10 @@
 <form method="post" action="{{ route('tasks.store') }}">
     @csrf
     <label for="title">Název:</label>
-    <input type="text" id="title" name="title" required><br><br>
+    <input type="text" id="title" name="title" value="{{old('title')}}" required ><br><br>
 
     <label for="content">Popis (volitelně):</label>
-    <textarea id="content" name="content"></textarea><br><br>
+    <textarea id="content" name="content" placeholder="{{old('content')}}"></textarea><br><br>
 
     <label for="deadline">Termín (max. 2 úkoly se stejným termínem):</label>
     <input type="date" id="deadline" name="deadline" required><br><br>

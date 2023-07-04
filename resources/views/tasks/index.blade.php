@@ -81,10 +81,6 @@
 <a id="cb" href="{{ route('tasks.create') }}" class="btn btn-secondary m-2">
         Nový úkol
 </a>
-@if (session('error'))
-    <div class="alert alert-danger">
-        {{ session('error') }}
-    </div>
-@endif
+
 </body>
 </html>

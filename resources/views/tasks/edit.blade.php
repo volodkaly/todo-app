@@ -22,7 +22,7 @@
     @method('PUT')
 
     <label for="title">Název:</label>
-    <input type="text" id="title" name="title" value="{{ htmlspecialchars($task->title) }}" required><br><br>
+    <input type="text" id="title" name="title" value="{{ htmlspecialchars($task->title) or old('title')}}"   required><br><br>
 
     <label for="content">Popis:</label>
     <textarea id="content" name="content">{{ htmlspecialchars($task->content) }}</textarea><br><br>
@@ -32,5 +32,10 @@
 
     <button type="submit" class="btn btn-secondary">Uložit</button>
 </form>
+@if (session('error'))
+    <div class="alert alert-danger">
+        {{ session('error') }}
+    </div>
+@endif
 </body>
 </html>

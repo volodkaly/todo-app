@@ -32,7 +32,7 @@ class TaskController extends Controller
                 }
 
                 $tasksCount = Task::where('deadline', $value)->count();
-                if ($tasksCount > 2) {
+                if ($tasksCount >= 2) {
                     $fail('Nelze mít více než 2 úkoly se stejným termínem. Zvolte jiný termín, prosím.');
                 }
             }],
@@ -60,6 +60,26 @@ class TaskController extends Controller
             'title' => 'required',
             'deadline' => 'required|date',
         ]);
+
+
+        $validator = Validator::make($request->all(), [
+            'title' => 'required',
+            'deadline' => ['required', 'date', function ($attribute, $value, $fail) {
+                if ($value < now()->toDateString()) {
+                    $fail('Nelze uložit úkol s minulým termínem. Zvolte prosím budoucí datum.');
+                }
+
+                $tasksCount = Task::where('deadline', $value)->count();
+                if ($tasksCount >= 2) {
+                    $fail('Nelze mít více než 2 úkoly se stejným termínem. Zvolte jiný termín, prosím.');
+                }
+            }],
+        ]);
+
+        if ($validator->fails()) {
+            return back()->withErrors($validator)->withInput();
+        }
+
         $task->title = trim($request->input('title'));
         $task->content = trim($request->input('content'));
         $task->deadline = $request->input('deadline');
