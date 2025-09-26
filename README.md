@@ -42,6 +42,6 @@ V tomto případě se na hlavní stránce zobrazí jen část dlouhého textu.<b
 <br>
 Vnitřní nástroje frameworku Laravel poskytují dostatečnou ochranu před XSS a SQL útoky.<br>
 Nicméně na výstupu v zobrazení v šablonách .blade text dříve zadaný uživatelem je navíc opatřen metodou PHP htmlspecialchars()<br>
-
+Uživatel je informován o chybách při zadávání (prázdné pole, minulé datum).<br>
 
 
