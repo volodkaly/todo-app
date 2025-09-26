@@ -41,6 +41,7 @@ To nedokáže zničit vzhled nebo čítelnost tabulky.<br>
 V tomto případě se na hlavní stránce zobrazí jen část dlouhého textu.<br>
 Zbytek se elegantně ořízne.<br>
 Veškerá logika je převážně na staně serveru, včetně dokonce změny statusu.<br>
+Tzn. každý klik na tlačítko vyvolává redirect a opětovné nahraní všeho obsahu.<br>
 <br>
 Vnitřní nástroje frameworku Laravel poskytují dostatečnou ochranu před XSS a SQL útoky.<br>
 Nicméně na výstupu v zobrazení v šablonách .blade text dříve zadaný uživatelem je navíc opatřen metodou PHP htmlspecialchars()<br> 
