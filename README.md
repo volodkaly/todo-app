@@ -35,7 +35,7 @@ http://127.0.0.1:8000<br>
 <h4>Popis:</h4>
 Nově vytvořený úkol má status "nesplněno, nedokončeno".<br>
 Status lze změnit tlačítkem.<br>
-Tabulka má adaptivní design přizpůsobuje se šířce okna.<br>
+Tabulka má adaptivní design: přizpůsobuje se šířce okna.<br>
 Je zohledněný případ, že název nebo popis úkolu bude přilíš dlouhý.<br>
 To nedokáže zničit vzhled nebo čítelnost tabulky.<br>
 V tomto případě se na hlavní stránce zobrazí jen část dlouhého textu.<br>
