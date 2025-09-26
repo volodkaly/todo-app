@@ -18,7 +18,7 @@ git clone https://github.com/volodkaly/todo-app.git<br>
 Vytvořit .env soubor v kořenu projektu<br>
 Zkopírovat šablonu:<br>
 cp .env.example .env<br>
-Upravit připojení k databázi (DB_CONNECTION, DB_DATABASE, DB_USERNAME, DB_PASSWORD).<br>
+Upravit připojení k databázi (DB_DATABASE, DB_USERNAME, DB_PASSWORD).<br>
 <br><br>
 Přejít do kořene projektu:<br>
 cd todo-apps<br>
