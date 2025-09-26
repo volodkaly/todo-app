@@ -21,7 +21,7 @@ cp .env.example .env<br>
 Upravit připojení k databázi (DB_DATABASE, DB_USERNAME, DB_PASSWORD).<br>
 <br><br>
 Přejít do kořene projektu:<br>
-cd todo-apps<br>
+cd todo-app<br>
 <br><br>
 spustit v terminalu příkazy:<br>
 composer install<br>
