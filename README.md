@@ -41,7 +41,8 @@ To nedokáže zničit vzhled nebo čítelnost tabulky.<br>
 V tomto případě se na hlavní stránce zobrazí jen část dlouhého textu.<br>
 <br>
 Vnitřní nástroje frameworku Laravel poskytují dostatečnou ochranu před XSS a SQL útoky.<br>
-Nicméně na výstupu v zobrazení v šablonách .blade text dříve zadaný uživatelem je navíc opatřen metodou PHP htmlspecialchars()<br> (spíš pro úkazku, že tu metodu znám, jinak její použití je zde zbytečné).<br>
+Nicméně na výstupu v zobrazení v šablonách .blade text dříve zadaný uživatelem je navíc opatřen metodou PHP htmlspecialchars()<br> 
+(metoda je zde použita pro úkazku, Laravel sám ošetřuje XSS).<br>
 Uživatel je informován o chybách při zadávání (prázdné pole, minulé datum).<br>
 
 
