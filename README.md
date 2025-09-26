@@ -46,8 +46,8 @@ Nicméně na výstupu v zobrazení v šablonách .blade text dříve zadaný už
 (metoda je zde použita pro úkazku, Laravel sám ošetřuje XSS).<br>
 Uživatel je informován o chybách při zadávání (prázdné pole, minulé datum).<br>
 <br>
-<h6>Styly:</h6>
+<h5>Styl</h5>
 Základem stylování je šablona CSS frameworku Bootstrap 5.<br>
-Zbytek je ručně doupraven.<br>
+Zbytek je ručně doupraven, zpestření a oživení zajištěno hover efekty.<br>
 
 <img width="1903" height="725" alt="image" src="https://github.com/user-attachments/assets/9141e605-1f55-4d62-857c-d72aeeb9efc2" />
