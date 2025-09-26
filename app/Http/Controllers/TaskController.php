@@ -33,7 +33,8 @@ class TaskController extends Controller
     public function store(Request $request, Task $task)
     {
         $validator = Validator::make($request->all(), [
-            'title' => 'required',
+            'title' =>
+                'required',
             'deadline' => [
                 'required',
                 'date',

@@ -12,20 +12,27 @@
     <h1>Upravit úkol</h1>
 
     @if ($errors->any())
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
+
+        @foreach ($errors->all() as $error)
+            <div class="alert alert-danger">{{ $error }}</div>
+        @endforeach
+
     @endif
+
+    @if (session('error'))
+        <div class="alert alert-danger">
+            {{ session('error') }}
+        </div>
+    @endif
+
 
     <form method="post" action="{{ route('tasks.update', $task) }}">
         @csrf
         @method('PUT')
 
         <label for="title">Název (do 30 znaků):</label>
-        <input type="text" id="title" name="title" maxlength="30" value="{{ htmlspecialchars($task->title) }}"
-            required><br><br>
+        <input type="text" id="title" name="title" maxlength="30"
+            value="{{ htmlspecialchars($task->title) }}"><br><br>
 
         <label for="content">Popis (volitelně do 100 znaků):</label>
         <textarea id="content" name="content" maxlength="100">{{ htmlspecialchars($task->content) }}</textarea><br><br>
@@ -35,11 +42,7 @@
 
         <button type="submit" class="btn btn-secondary">Uložit</button>
     </form>
-    @if (session('error'))
-        <div class="alert alert-danger">
-            {{ session('error') }}
-        </div>
-    @endif
+
 </body>
 
 </html>

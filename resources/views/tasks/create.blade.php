@@ -11,11 +11,17 @@
 <body>
     <h1>Vytvořit nový úkol</h1>
 
+    @if ($errors->any())
+        @foreach ($errors->all() as $error)
+            <div class="alert alert-danger">{{ $error }}</div>
+        @endforeach
+
+    @endif
 
     <form method="post" action="{{ route('tasks.store') }}">
         @csrf
         <label for="title">Název (do 30 znaků):</label>
-        <input type="text" id="title" name="title" maxlength="30" required><br><br>
+        <input type="text" id="title" name="title" maxlength="30"><br><br>
 
         <label for="content">Popis (volitelně do 100 znaků):</label>
         <textarea id="content" name="content" maxlength="100"></textarea><br><br>
@@ -26,13 +32,7 @@
         <button type="submit" class="btn btn-secondary">Uložit</button>
     </form>
 
-    @if ($errors->any())
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    @endif
+
 
 </body>
 
