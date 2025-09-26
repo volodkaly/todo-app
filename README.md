@@ -39,5 +39,9 @@ Tabulka má adaptivní design: přizpůsobuje se šířce okna.<br>
 Je zohledněný případ, že název nebo popis úkolu bude přilíš dlouhý.<br>
 To nedokáže zničit vzhled nebo čítelnost tabulky.<br>
 V tomto případě se na hlavní stránce zobrazí jen část dlouhého textu.<br>
+<br>
+Vnitřní nástroje frameworku Laravel poskytují dostatečnou ochranu před XSS a SQL útoky.<br>
+Nicméně na výstupu v zobrazení v šablonách .blade text dříve zadaný uživatelem je navíc opatřen metodou PHP htmlspecialchars()<br>
+
 
 
