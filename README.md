@@ -51,5 +51,6 @@ Uživatel je informován o chybách při zadávání (prázdné pole, minulé da
 <h5>Styl</h5>
 Základem stylování je šablona CSS frameworku Bootstrap 5.<br>
 Zbytek je ručně doupraven, zpestření a oživení zajištěno hover efekty.<br>
+Aktivní a dokončené úkoly jsou rozlišeny barvou.<br>
 
 <img width="1903" height="725" alt="image" src="https://github.com/user-attachments/assets/9141e605-1f55-4d62-857c-d72aeeb9efc2" />
