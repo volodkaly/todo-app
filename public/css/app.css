@@ -73,3 +73,7 @@ h1.h1 {
 .row-incompleted {
   background-color: #d66e1969 !important;
 }
+
+#content {
+  height: 150px;
+}
