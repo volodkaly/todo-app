@@ -1,9 +1,9 @@
-<h4>Předpoklady:</h4><br>
+<h4>Předpoklady:</h4>
 Composer version 2.7.1 <br>
 Laravel Framework 10.14.1<br>
 "php": "^8.1"<br>
 <br><br>
-<h4>Návod:</h4><br>
+<h4>Návod:</h4>
 Nainstalovat php<br>
 Ověřit, že funguje příkaz:<br>
 php -v<br>
