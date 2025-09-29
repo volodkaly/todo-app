@@ -7,24 +7,28 @@ use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
 use Illuminate\Support\Facades\Validator;
 
+
 class TaskController extends Controller
 {
     public function index(Request $request)
     {
-        //dostavame hodnotu ze zobrazeni a dale na jeji zaklade zde filtrujeme ukoly
         $showWithStatus = $request->input('showWithStatus');
-        $sort = $request->input('sort', 'title'); //ze zobrazeni dostavame signal pro razeni
-        //nejsou-li zadne ukoly - promenna bude mit jen prazdne pole
-        //ukoly radime dle nazvu nebo dle terminu
-        Task::all() ? $tasks = Task::orderBy($sort)->get() : $tasks = [];
+        $sort = $request->input('sort', 'title');
+
+        $query = Task::query();
+
         if ($showWithStatus === 'completed') {
-            Task::all() ? $tasks = Task::orderBy($sort)->where('completed', true)->get() : $tasks = [];
+            $query->where('completed', true);
         } elseif ($showWithStatus === 'incompleted') {
-            Task::all() ? $tasks = Task::orderBy($sort)->where('completed', false)->get() : $tasks = [];
+            $query->where('completed', false);
         }
+        $tasks = $query->get();
+        $tasks = $tasks->sortBy(function ($task) use ($sort) {
+            return mb_strtolower($task->{$sort});
+        }, SORT_NATURAL)->values();
+
         return view('tasks.index', compact('tasks', 'showWithStatus'));
     }
-
     public function create()
     {
         return view('tasks.create');

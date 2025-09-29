@@ -27,11 +27,6 @@ class Task extends Model
                 session()->flash('error', 'Nelze uložit úkol s minulým termínem. Zvolte prosím budoucí datum.');
                 return false;
             }
-            $TasksCount = Task::where('deadline', $model->deadline)->count();
-            if ($TasksCount > 2) {
-                session()->flash('error', 'Nelze mít víc než 2 úkoly se stejným termínem. Zvolte jiný termín, prosím');
-                return false;
-            }
         });
     }
 }
