@@ -1,3 +1,4 @@
+https://github.com/user-attachments/assets/e2411591-bc9b-4da2-a8b7-47d4493e3a10
 <h4>Předpoklady:</h4>
 Composer version 2.7.1 <br>
 Laravel Framework 10.14.1<br>
@@ -54,3 +55,8 @@ Zbytek je ručně doupraven, zpestření a oživení zajištěno hover efekty.<b
 Aktivní a dokončené úkoly jsou rozlišeny barvou.<br>
 
 <img width="1903" height="725" alt="image" src="https://github.com/user-attachments/assets/9141e605-1f55-4d62-857c-d72aeeb9efc2" />
+
+
+
+
+
