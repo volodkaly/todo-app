@@ -23,9 +23,7 @@ class TaskController extends Controller
             $query->where('completed', false);
         }
         $tasks = $query->get();
-        $tasks = $tasks->sortBy(function ($task) use ($sort) {
-            return mb_strtolower($task->{$sort});
-        }, SORT_NATURAL)->values();
+        $tasks = $tasks->sortBy($sort, SORT_NATURAL | SORT_FLAG_CASE)->values();
 
         return view('tasks.index', compact('tasks', 'showWithStatus'));
     }
