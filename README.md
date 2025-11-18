@@ -1,4 +1,6 @@
-https://github.com/user-attachments/assets/e2411591-bc9b-4da2-a8b7-47d4493e3a10
+
+https://github.com/user-attachments/assets/c9f197f5-36ce-43fe-9283-d4fb395c7e8a
+
 <h4>Předpoklady:</h4>
 Composer version 2.7.1 <br>
 Laravel Framework 10.14.1<br>
